@@ -90,3 +90,4 @@ db.sqlite3
 
 # My files
 brain.webp
+staticfiles/
