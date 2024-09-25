@@ -1,11 +1,13 @@
+{% load i18n%}
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="es">
+
+<html lang="{% get_current_language as LANGUAGE_CODE %}{{ LANGUAGE_CODE }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Israel Lencina Navarro</title>
+    <title>{% trans "Portafolio"%} - Israel Lencina Navarro</title>
     <link rel="stylesheet" href="styles.css"> <!-- Estilo CSS externo -->
     <style>
         /* Añadir estilos básicos en caso de no tener un archivo CSS externo */
@@ -67,26 +69,33 @@
     <!-- Encabezado -->
     <header>
         <nav>
-            <a href="#about">Sobre mí</a>
-            <a href="#skills">Habilidades</a>
-            <a href="#projects">Proyectos personales</a>
-            <a href="#github">GitHub</a>
-            <a href="#tfg">TFG</a>
+            <a href="#about">{% trans "Sobre mí"%}</a>
+            <a href="#skills">{% trans "Habilidades"%}</a>
+            <a href="#projects">{% trans "Proyectos personales"%}</a>
+            <a href="#github">{% trans "GitHub"%}</a>
+            <a href="#tfg">{% trans "TFG"%}</a>
             <a href="#timeline">Timeline</a>
-            <a href="#contact">Contacto</a>
+            <a href="#contact">{% trans "Contacto"%}</a>
             <a href="#cv">CV</a>
         </nav>
+        <form action="{% url 'set_language' %}" method="post">
+            {% csrf_token %}
+            <select name="language">
+                <option value="es" {% if LANGUAGE_CODE == 'es' %}selected{% endif %}>Español</option>
+                <option value="en" {% if LANGUAGE_CODE == 'en' %}selected{% endif %}>English</option>
+            </select>
+            <button type="submit">{% trans "Cambiar idioma" %}</button>
+        </form>
     </header>
 
     <!-- Sección: Sobre mí -->
     <section id="about">
         <div class="container">
             <div class="column">
-                <img src="tu-imagen.jpg" alt="Foto de Israel Lencina Navarro" style="width:100%; border-radius: 10px;">
+                <img src="israel.png" alt="Foto de Israel Lencina Navarro" style="width:100%; border-radius: 10px;">
                 <footer>
                     <nav>
-                        <a href="https://linkedin.com/in/tu-usuario" target="_blank">LinkedIn</a>
-                        <a href="https://twitter.com/tu-usuario" target="_blank">Twitter</a>
+                        <a href="https://linkedin.com/in/IsraelLencina" target="_blank">LinkedIn</a>
                         <!-- Añadir más redes sociales si es necesario -->
                     </nav>
                 </footer>
@@ -94,15 +103,15 @@
             <div class="column">
                 <h2>Israel Lencina Navarro</h2>
                 <p>
-                    Soy un desarrollador enfocado en Machine Learning y Deep Learning. Con varios años de experiencia en 
+                    {% trans "Soy un desarrollador enfocado en Machine Learning y Deep Learning. Con varios años de experiencia en 
                     proyectos de inteligencia artificial, he trabajado en diversas áreas como análisis de datos, visión 
-                    por computadora, y procesamiento del lenguaje natural.
+                    por computadora, y procesamiento del lenguaje natural."%}
                 </p>
                 <p>Explora mi portfolio para conocer más sobre mis habilidades, proyectos y experiencia profesional.</p>
                 <nav>
-                    <a href="#skills">Habilidades</a>
-                    <a href="#projects">Proyectos personales</a>
-                    <a href="#contact">Contacto</a>
+                    <a href="#skills">{% trans "Habilidades"%}</a>
+                    <a href="#projects">{% trans "Proyectos personales"%}</a>
+                    <a href="#contact">{% trans "Contacto"%}</a>
                     <a href="#cv">CV</a>
                 </nav>
             </div>
@@ -111,22 +120,22 @@
 
     <!-- Sección: Habilidades -->
     <section id="skills">
-        <h2>Habilidades</h2>
+        <h2>{% trans "Habilidades"%}</h2>
         <div class="skills">
             <div class="skill">
                 <img src="ml-skill.jpg" alt="Machine Learning">
                 <h3>Machine Learning</h3>
-                <p>Experto en la implementación de modelos de ML, utilizando herramientas como Scikit-learn y TensorFlow.</p>
+                <p>{% trans "Experto en la implementación de modelos de ML, utilizando herramientas como Scikit-learn y TensorFlow."%}</p>
             </div>
             <div class="skill">
                 <img src="dl-skill.jpg" alt="Deep Learning">
                 <h3>Deep Learning</h3>
-                <p>Desarrollo avanzado en redes neuronales y aplicaciones de Deep Learning con Keras y PyTorch.</p>
+                <p>{% trans "Desarrollo avanzado en redes neuronales y aplicaciones de Deep Learning con Keras y PyTorch."%}</p>
             </div>
             <div class="skill">
                 <img src="data-skill.jpg" alt="Data Analysis">
-                <h3>Análisis de datos</h3>
-                <p>Especialización en análisis de datos, desde limpieza hasta visualización y generación de insights.</p>
+                <h3>{% trans "Análisis de datos"%}</h3>
+                <p>{% trans "Especialización en análisis de datos, desde limpieza hasta visualización y generación de insights."%}</p>
             </div>
             <!-- Añadir más habilidades según sea necesario -->
         </div>
@@ -134,24 +143,24 @@
 
     <!-- Sección: Proyectos personales -->
     <section id="projects">
-        <h2>Proyectos personales</h2>
+        <h2>{% trans "Proyectos personales"%}</h2>
         <div class="projects">
             <div class="project">
                 <a href="proyecto1.html">
                     <img src="proyecto1.jpg" alt="Proyecto 1">
-                    <h3>Proyecto 1</h3>
+                    <h3>{% trans "Proyecto 1"%}</h3>
                 </a>
             </div>
             <div class="project">
                 <a href="proyecto2.html">
                     <img src="proyecto2.jpg" alt="Proyecto 2">
-                    <h3>Proyecto 2</h3>
+                    <h3>{% trans "Proyecto 2"%}</h3>
                 </a>
             </div>
             <div class="project">
                 <a href="proyecto3.html">
                     <img src="proyecto3.jpg" alt="Proyecto 3">
-                    <h3>Proyecto 3</h3>
+                    <h3>{% trans "Proyecto 3"%}</h3>
                 </a>
             </div>
             <!-- Añadir más proyectos -->
@@ -162,35 +171,37 @@
     <section id="github">
         <h2>GitHub</h2>
         <p>
-            Puedes encontrar más de mis proyectos en mi perfil de GitHub. 
-            <a href="https://github.com/tu-usuario" target="_blank">Acceder a GitHub</a>.
+            {% trans "Puedes encontrar más de mis proyectos en mi perfil de GitHub."%} 
+            <a href="https://github.com/IsraelLencina" target="_blank">{% trans "Acceder a GitHub"%}</a>.
         </p>
     </section>
 
     <!-- Sección: TFG -->
     <section id="tfg">
-        <h2>Trabajo de Fin de Grado (TFG)</h2>
+        <h2>{% trans "Trabajo de Fin de Grado"%} (TFG)</h2>
         <p>
-            Puedes consultar mi TFG en el siguiente enlace: 
+            {% trans "Puedes consultar mi TFG en el siguiente enlace"%}: 
             <a href="tfg.pdf" target="_blank">Descargar TFG</a>.
         </p>
     </section>
 
     <!-- Sección: Timeline -->
     <section id="timeline">
-        <h2>Progresión profesional</h2>
+        <h2>{% trans "Progresión profesional"%}</h2>
         <div class="timeline">
             <div class="timeline-item">
                 <img src="empresa1-logo.jpg" alt="Empresa 1">
-                <h3>Empresa 1</h3>
-                <p>Fechas: 2020 - 2022</p>
-                <p>Descripción de mis aportaciones en la empresa.</p>
+                <h3>Cibinar</h3>
+                <p>{% trans "Fechas"%}: 2020 - 2022</p>
+                <p>{% trans "Puesto:"%} Machine learning Developer.</p>
+                <p>{% trans "Descripción de mis aportaciones en la empresa."%}</p>
             </div>
             <div class="timeline-item">
                 <img src="empresa2-logo.jpg" alt="Empresa 2">
-                <h3>Empresa 2</h3>
-                <p>Fechas: 2018 - 2020</p>
-                <p>Descripción de mis aportaciones en la empresa.</p>
+                <h3>Ikos Tech</h3>
+                <p>{% trans "Fechas"%}: 2018 - 2020</p>
+                <p>{% trans "Puesto:"%} Chief Analytics Officer</p>
+                <p>{% trans "Descripción de mis aportaciones en la empresa."%}</p>
             </div>
             <!-- Añadir más empresas -->
         </div>
@@ -198,33 +209,33 @@
 
     <!-- Sección: Contacto -->
     <section id="contact">
-        <h2>Contacto</h2>
+        <h2>{% trans "Contacto"%}</h2>
         <p>Email: <a href="mailto:israel.lencina@gmail.com">israel.lencina@gmail.com</a></p>
         <p>Teléfono: <a href="tel:+34 601 241 593">+34 601 241 593</a></p>
         <form action="/send-message" method="POST">
-            <label for="name">Nombre:</label>
+            <label for="name">{% trans "Nombre"%}:</label>
             <input type="text" id="name" name="name" required><br><br>
-            <label for="message">Mensaje:</label>
+            <label for="message">{% trans "Mensaje"%}:</label>
             <textarea id="message" name="message" required></textarea><br><br>
-            <input type="submit" value="Enviar">
+            <input type="submit" value="{% trans 'Enviar'%}">
         </form>
     </section>
 
     <!-- Sección: CV -->
     <section id="cv">
-        <h2>Currículum</h2>
+        <h2>CV</h2>
         <p>
-            Puedes descargar mi CV aquí: 
-            <a href="cv.pdf" target="_blank">Descargar CV</a>.
+            {% trans "Puedes descargar mi CV aquí"%}: 
+            <a href="cv.pdf" target="_blank">{% trans "Descargar"%} CV</a>.
         </p>
     </section>
 
     <!-- Pie de página -->
     <footer>
         <nav>
-            <a href="#about">Sobre mí</a>
-            <a href="#contact">Contacto</a>
-            <a href="cv.pdf" target="_blank">Descargar CV</a>
+            <a href="#about">{% trans "Sobre mí"%}</a>
+            <a href="#contact">{% trans "Contacto"%}</a>
+            <a href="cv.pdf" target="_blank">{% trans "Descargar"%} CV</a>
         </nav>
     </footer>
 </body>

@@ -1,0 +1,145 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-25 08:09+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? "
+"1 : 2;\n"
+#: .\mainpage\templates\mainpage\home.html:8
+msgid "Portafolio"
+msgstr "Portfolio"
+
+#: .\mainpage\templates\mainpage\home.html:70
+#: .\mainpage\templates\mainpage\home.html:227
+msgid "Sobre mí"
+msgstr "About me"
+
+#: .\mainpage\templates\mainpage\home.html:71
+#: .\mainpage\templates\mainpage\home.html:103
+#: .\mainpage\templates\mainpage\home.html:114
+msgid "Habilidades"
+msgstr "Skills"
+
+#: .\mainpage\templates\mainpage\home.html:72
+#: .\mainpage\templates\mainpage\home.html:104
+#: .\mainpage\templates\mainpage\home.html:137
+msgid "Proyectos personales"
+msgstr "Personal projects"
+
+#: .\mainpage\templates\mainpage\home.html:73
+msgid "GitHub"
+msgstr "GitHub"
+
+#: .\mainpage\templates\mainpage\home.html:74
+msgid "TFG"
+msgstr "Thesis"
+
+#: .\mainpage\templates\mainpage\home.html:76
+#: .\mainpage\templates\mainpage\home.html:105
+#: .\mainpage\templates\mainpage\home.html:203
+#: .\mainpage\templates\mainpage\home.html:228
+msgid "Contacto"
+msgstr "Contact"
+
+#: .\mainpage\templates\mainpage\home.html:119
+msgid ""
+"Experto en la implementación de modelos de ML, utilizando herramientas como "
+"Scikit-learn y TensorFlow."
+msgstr ""
+
+#: .\mainpage\templates\mainpage\home.html:124
+msgid ""
+"Desarrollo avanzado en redes neuronales y aplicaciones de Deep Learning con "
+"Keras y PyTorch."
+msgstr ""
+
+#: .\mainpage\templates\mainpage\home.html:128
+msgid "Análisis de datos"
+msgstr ""
+
+#: .\mainpage\templates\mainpage\home.html:129
+msgid ""
+"Especialización en análisis de datos, desde limpieza hasta visualización y "
+"generación de insights."
+msgstr ""
+
+#: .\mainpage\templates\mainpage\home.html:142
+msgid "Proyecto 1"
+msgstr ""
+
+#: .\mainpage\templates\mainpage\home.html:148
+msgid "Proyecto 2"
+msgstr ""
+
+#: .\mainpage\templates\mainpage\home.html:154
+msgid "Proyecto 3"
+msgstr ""
+
+#: .\mainpage\templates\mainpage\home.html:165
+msgid "Puedes encontrar más de mis proyectos en mi perfil de GitHub."
+msgstr ""
+
+#: .\mainpage\templates\mainpage\home.html:166
+msgid "Acceder a GitHub"
+msgstr ""
+
+#: .\mainpage\templates\mainpage\home.html:172
+msgid "Trabajo de Fin de Grado"
+msgstr ""
+
+#: .\mainpage\templates\mainpage\home.html:174
+msgid "Puedes consultar mi TFG en el siguiente enlace"
+msgstr ""
+
+#: .\mainpage\templates\mainpage\home.html:181
+msgid "Progresión profesional"
+msgstr ""
+
+#: .\mainpage\templates\mainpage\home.html:186
+#: .\mainpage\templates\mainpage\home.html:193
+msgid "Fechas"
+msgstr ""
+
+#: .\mainpage\templates\mainpage\home.html:187
+#: .\mainpage\templates\mainpage\home.html:194
+msgid "Puesto:"
+msgstr ""
+
+#: .\mainpage\templates\mainpage\home.html:188
+#: .\mainpage\templates\mainpage\home.html:195
+msgid "Descripción de mis aportaciones en la empresa."
+msgstr ""
+
+#: .\mainpage\templates\mainpage\home.html:207
+msgid "Nombre"
+msgstr ""
+
+#: .\mainpage\templates\mainpage\home.html:209
+msgid "Mensaje"
+msgstr ""
+
+#: .\mainpage\templates\mainpage\home.html:211
+msgid "Enviar"
+msgstr ""
+
+#: .\mainpage\templates\mainpage\home.html:219
+msgid "Puedes descargar mi CV aquí"
+msgstr ""
+
+#: .\mainpage\templates\mainpage\home.html:220
+#: .\mainpage\templates\mainpage\home.html:229
+msgid "Descargar"
+msgstr ""
