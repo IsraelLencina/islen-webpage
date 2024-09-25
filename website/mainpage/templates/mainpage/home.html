@@ -1,12 +1,231 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
-        <title>Mi Sitio Web</title>
-    </head>
-    <body>
-        <h1>¡Bienvenido a mi sitio web básico con Django!</h1>
-        <p>Este es un sitio web simple creado como ejemplo.</p>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Israel Lencina Navarro</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Estilo CSS externo -->
+    <style>
+        /* Añadir estilos básicos en caso de no tener un archivo CSS externo */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header, footer {
+            background-color: #333;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+        header nav a, footer nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        section {
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .column {
+            width: 48%;
+        }
+        .skills, .projects, .timeline {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .skill, .project, .timeline-item {
+            width: 30%;
+            margin: 10px;
+            text-align: center;
+        }
+        .project img, .timeline img, .skill img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        footer {
+            display: flex;
+            justify-content: center;
+        }
+        footer nav {
+            display: flex;
+            gap: 15px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <nav>
+            <a href="#about">Sobre mí</a>
+            <a href="#skills">Habilidades</a>
+            <a href="#projects">Proyectos personales</a>
+            <a href="#github">GitHub</a>
+            <a href="#tfg">TFG</a>
+            <a href="#timeline">Timeline</a>
+            <a href="#contact">Contacto</a>
+            <a href="#cv">CV</a>
+        </nav>
+    </header>
+
+    <!-- Sección: Sobre mí -->
+    <section id="about">
+        <div class="container">
+            <div class="column">
+                <img src="tu-imagen.jpg" alt="Foto de Israel Lencina Navarro" style="width:100%; border-radius: 10px;">
+                <footer>
+                    <nav>
+                        <a href="https://linkedin.com/in/tu-usuario" target="_blank">LinkedIn</a>
+                        <a href="https://twitter.com/tu-usuario" target="_blank">Twitter</a>
+                        <!-- Añadir más redes sociales si es necesario -->
+                    </nav>
+                </footer>
+            </div>
+            <div class="column">
+                <h2>Israel Lencina Navarro</h2>
+                <p>
+                    Soy un desarrollador enfocado en Machine Learning y Deep Learning. Con varios años de experiencia en 
+                    proyectos de inteligencia artificial, he trabajado en diversas áreas como análisis de datos, visión 
+                    por computadora, y procesamiento del lenguaje natural.
+                </p>
+                <p>Explora mi portfolio para conocer más sobre mis habilidades, proyectos y experiencia profesional.</p>
+                <nav>
+                    <a href="#skills">Habilidades</a>
+                    <a href="#projects">Proyectos personales</a>
+                    <a href="#contact">Contacto</a>
+                    <a href="#cv">CV</a>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección: Habilidades -->
+    <section id="skills">
+        <h2>Habilidades</h2>
+        <div class="skills">
+            <div class="skill">
+                <img src="ml-skill.jpg" alt="Machine Learning">
+                <h3>Machine Learning</h3>
+                <p>Experto en la implementación de modelos de ML, utilizando herramientas como Scikit-learn y TensorFlow.</p>
+            </div>
+            <div class="skill">
+                <img src="dl-skill.jpg" alt="Deep Learning">
+                <h3>Deep Learning</h3>
+                <p>Desarrollo avanzado en redes neuronales y aplicaciones de Deep Learning con Keras y PyTorch.</p>
+            </div>
+            <div class="skill">
+                <img src="data-skill.jpg" alt="Data Analysis">
+                <h3>Análisis de datos</h3>
+                <p>Especialización en análisis de datos, desde limpieza hasta visualización y generación de insights.</p>
+            </div>
+            <!-- Añadir más habilidades según sea necesario -->
+        </div>
+    </section>
+
+    <!-- Sección: Proyectos personales -->
+    <section id="projects">
+        <h2>Proyectos personales</h2>
+        <div class="projects">
+            <div class="project">
+                <a href="proyecto1.html">
+                    <img src="proyecto1.jpg" alt="Proyecto 1">
+                    <h3>Proyecto 1</h3>
+                </a>
+            </div>
+            <div class="project">
+                <a href="proyecto2.html">
+                    <img src="proyecto2.jpg" alt="Proyecto 2">
+                    <h3>Proyecto 2</h3>
+                </a>
+            </div>
+            <div class="project">
+                <a href="proyecto3.html">
+                    <img src="proyecto3.jpg" alt="Proyecto 3">
+                    <h3>Proyecto 3</h3>
+                </a>
+            </div>
+            <!-- Añadir más proyectos -->
+        </div>
+    </section>
+
+    <!-- Sección: GitHub -->
+    <section id="github">
+        <h2>GitHub</h2>
+        <p>
+            Puedes encontrar más de mis proyectos en mi perfil de GitHub. 
+            <a href="https://github.com/tu-usuario" target="_blank">Acceder a GitHub</a>.
+        </p>
+    </section>
+
+    <!-- Sección: TFG -->
+    <section id="tfg">
+        <h2>Trabajo de Fin de Grado (TFG)</h2>
+        <p>
+            Puedes consultar mi TFG en el siguiente enlace: 
+            <a href="tfg.pdf" target="_blank">Descargar TFG</a>.
+        </p>
+    </section>
+
+    <!-- Sección: Timeline -->
+    <section id="timeline">
+        <h2>Progresión profesional</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <img src="empresa1-logo.jpg" alt="Empresa 1">
+                <h3>Empresa 1</h3>
+                <p>Fechas: 2020 - 2022</p>
+                <p>Descripción de mis aportaciones en la empresa.</p>
+            </div>
+            <div class="timeline-item">
+                <img src="empresa2-logo.jpg" alt="Empresa 2">
+                <h3>Empresa 2</h3>
+                <p>Fechas: 2018 - 2020</p>
+                <p>Descripción de mis aportaciones en la empresa.</p>
+            </div>
+            <!-- Añadir más empresas -->
+        </div>
+    </section>
+
+    <!-- Sección: Contacto -->
+    <section id="contact">
+        <h2>Contacto</h2>
+        <p>Email: <a href="mailto:israel.lencina@gmail.com">israel.lencina@gmail.com</a></p>
+        <p>Teléfono: <a href="tel:+34 601 241 593">+34 601 241 593</a></p>
+        <form action="/send-message" method="POST">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" required></textarea><br><br>
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
+
+    <!-- Sección: CV -->
+    <section id="cv">
+        <h2>Currículum</h2>
+        <p>
+            Puedes descargar mi CV aquí: 
+            <a href="cv.pdf" target="_blank">Descargar CV</a>.
+        </p>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <nav>
+            <a href="#about">Sobre mí</a>
+            <a href="#contact">Contacto</a>
+            <a href="cv.pdf" target="_blank">Descargar CV</a>
+        </nav>
+    </footer>
+</body>
 </html>
